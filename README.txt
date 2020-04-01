@@ -18,7 +18,7 @@ Setting up work enviornment
 
 Setup FreeRTOS in CCS
 
-1. In workspace_v10, do "git clone https://github.com/choudhariashish/msp432ws"
+1. In your home directory, do "git clone https://github.com/choudhariashish/msp432ws"
 2. Open the Code Composer Studio(CCS) and select default workspace as "msp432ws"
 3. Open CCS and in project explorer import CCS projects from "msp432ws" that we just cloned
 4. Window->Preferences->Code Composer Studio->Build->Variables and click Add
