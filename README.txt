@@ -11,17 +11,15 @@ Setting up work enviornment
 9. Select "SimpleLink MSP432 low power + performance MCUs"
 10. Click Forward
 11. Select default debug probe selection and continue
-12. Open the Code Composer Studio(CCS) and select default workspace example "workspace_v10"
-13. Close CCS
-14. cd to directory where "simplelink_msp432e4_sdk_4_10_00_13.run" is downloaded
-15. chmod +x simplelink_msp432e4_sdk_4_10_00_13.run
-16. ./simplelink_msp432e4_sdk_4_10_00_13.run
-17. Install to default location, it should detect TI folder
+12. cd to directory where "simplelink_msp432e4_sdk_4_10_00_13.run" is downloaded
+13. chmod +x simplelink_msp432e4_sdk_4_10_00_13.run
+14. ./simplelink_msp432e4_sdk_4_10_00_13.run
+15. Install to default location, it should detect TI folder
 
 Setup FreeRTOS in CCS
 
-1. Move FreeRTOSv10.3.1 to workspace_v10 directory which just got created
-2. In workspace_v10, do "git clone https://github.com/choudhariashish/msp432"
-3. Open CCS and in project explorer import CCS project "msp432" that we just cloned
+1. In workspace_v10, do "git clone https://github.com/choudhariashish/msp432ws"
+2. Open the Code Composer Studio(CCS) and select default workspace as "msp432ws"
+3. Open CCS and in project explorer import CCS projects from "msp432ws" that we just cloned
 4. Window->Preferences->Code Composer Studio->Build->Variables and click Add
 5. Variable name: FREERTOS_INSTALL_DIR and set value as path to /your/path/FreeRTOSv10.3.1
