@@ -2,8 +2,17 @@
 #define STATUS_CODE_H_
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stddef.h>
 
 #define STATUS_MSG_SIZE    32
+
+enum PIN_STATE
+{
+    LOW,
+    HIGH
+};
 
 enum STATUS_CODE
 {
