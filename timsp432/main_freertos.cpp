@@ -23,7 +23,8 @@ int main(void)
 {
     Board_init();
 
-    App::initialize();
+    App app;
+    app.initialize();
 
     ti_ndk_config_Global_startupFxn();
 

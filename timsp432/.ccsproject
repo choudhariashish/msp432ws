@@ -15,4 +15,5 @@
 	<templateProperties value="id=tcpecho_MSP_EXP432E401Y_freertos_ccs.projectspec.tcpecho_MSP_EXP432E401Y_freertos_ccs,buildProfile=release,isHybrid=true"/>
 	<origin value="/home/ashish/ti/simplelink_msp432e4_sdk_4_10_00_13/examples/rtos/MSP_EXP432E401Y/ns/tcpecho/freertos/ccs/tcpecho_MSP_EXP432E401Y_freertos_ccs.projectspec"/>
 	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
 </projectOptions>

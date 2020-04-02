@@ -1,71 +1,261 @@
-/*
- * Copyright (c) 2018-2019, Texas Instruments Incorporated - http://www.ti.com
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * *  Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *
- * *  Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- *
- * *  Neither the name of Texas Instruments Incorporated nor the names of
- *    its contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-// @cliArgs --board /ti/boards/MSP_EXP432E401Y
-
-/*
- *  tcpecho.syscfg
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/MSP_EXP432E401Y" --product "simplelink_msp432e4_sdk@4.10.00.13"
+ * @versions {"data":"2020021217","timestamp":"2020021217","tool":"1.4.0+1234","templates":"2020021217"}
  */
 
-/* ======== RTOS ======== */
-var RTOS = scripting.addModule("/ti/drivers/RTOS");
+/**
+ * Import the modules used in this configuration.
+ */
+const ADC     = scripting.addModule("/ti/drivers/ADC", {}, false);
+const ADC1    = ADC.addInstance();
+const ADC2    = ADC.addInstance();
+const ADC3    = ADC.addInstance();
+const ADC4    = ADC.addInstance();
+const ADC5    = ADC.addInstance();
+const ADC6    = ADC.addInstance();
+const ADC7    = ADC.addInstance();
+const ADC8    = ADC.addInstance();
+const ADC9    = ADC.addInstance();
+const ADC10   = ADC.addInstance();
+const ADC11   = ADC.addInstance();
+const ADC12   = ADC.addInstance();
+const GPIO    = scripting.addModule("/ti/drivers/GPIO", {}, false);
+const GPIO1   = GPIO.addInstance();
+const GPIO2   = GPIO.addInstance();
+const GPIO3   = GPIO.addInstance();
+const GPIO4   = GPIO.addInstance();
+const GPIO5   = GPIO.addInstance();
+const GPIO6   = GPIO.addInstance();
+const GPIO7   = GPIO.addInstance();
+const GPIO8   = GPIO.addInstance();
+const GPIO9   = GPIO.addInstance();
+const GPIO10  = GPIO.addInstance();
+const GPIO11  = GPIO.addInstance();
+const GPIO12  = GPIO.addInstance();
+const GPIO13  = GPIO.addInstance();
+const GPIO14  = GPIO.addInstance();
+const GPIO15  = GPIO.addInstance();
+const GPIO16  = GPIO.addInstance();
+const I2C     = scripting.addModule("/ti/drivers/I2C", {}, false);
+const I2C1    = I2C.addInstance();
+const PWM     = scripting.addModule("/ti/drivers/PWM", {}, false);
+const PWM1    = PWM.addInstance();
+const PWM2    = PWM.addInstance();
+const PWM3    = PWM.addInstance();
+const PWM4    = PWM.addInstance();
+const PWM5    = PWM.addInstance();
+const PWM6    = PWM.addInstance();
+const RTOS    = scripting.addModule("/ti/drivers/RTOS");
+const Timer   = scripting.addModule("/ti/drivers/Timer", {}, false);
+const Timer1  = Timer.addInstance();
+const Timer2  = Timer.addInstance();
+const Timer3  = Timer.addInstance();
+const Timer4  = Timer.addInstance();
+const UART    = scripting.addModule("/ti/drivers/UART", {}, false);
+const UART1   = UART.addInstance();
+const General = scripting.addModule("/ti/ndk/General");
+const NIMU    = scripting.addModule("/ti/ndk/NIMU");
+const NIMU1   = NIMU.addInstance();
+const SlNet   = scripting.addModule("/ti/net/SlNet");
+const SlNet1  = SlNet.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+ADC1.$name              = "CONFIG_ADC_0";
+ADC1.adc.$name          = "MyADC1";
+ADC1.adc.adcPin.$assign = "boosterpack2.23";
+
+ADC2.$name              = "CONFIG_ADC_1";
+ADC2.adc.$name          = "MyADC1";
+ADC2.adc.adcPin.$assign = "boosterpack2.24";
+
+ADC3.$name              = "CONFIG_ADC_2";
+ADC3.adc.$name          = "MyADC1";
+ADC3.adc.adcPin.$assign = "boosterpack2.25";
+
+ADC4.$name              = "CONFIG_ADC_3";
+ADC4.adc.$name          = "MyADC1";
+ADC4.adc.adcPin.$assign = "boosterpack2.26";
+
+ADC5.$name              = "CONFIG_ADC_4";
+ADC5.adc.$name          = "MyADC1";
+ADC5.adc.adcPin.$assign = "boosterpack2.27";
+
+ADC6.$name              = "CONFIG_ADC_5";
+ADC6.adc.$name          = "MyADC1";
+ADC6.adc.adcPin.$assign = "boosterpack2.28";
+
+ADC7.$name              = "CONFIG_ADC_6";
+ADC7.adc.$name          = "MyADC1";
+ADC7.adc.adcPin.$assign = "boosterpack.2";
+
+ADC8.$name              = "CONFIG_ADC_7";
+ADC8.adc.$name          = "MyADC1";
+ADC8.adc.adcPin.$assign = "boosterpack.6";
+
+ADC9.$name              = "CONFIG_ADC_8";
+ADC9.adc.$name          = "MyADC1";
+ADC9.adc.adcPin.$assign = "boosterpack.23";
+
+ADC10.$name              = "CONFIG_ADC_9";
+ADC10.adc.$name          = "MyADC1";
+ADC10.adc.adcPin.$assign = "boosterpack.24";
+
+ADC11.$name              = "CONFIG_ADC_10";
+ADC11.adc.$name          = "MyADC1";
+ADC11.adc.adcPin.$assign = "boosterpack.25";
+
+ADC12.$name              = "CONFIG_ADC_11";
+ADC12.adc.$name          = "MyADC1";
+ADC12.adc.adcPin.$assign = "boosterpack.26";
+
+GPIO1.$name           = "CONFIG_GPIO_0";
+GPIO1.gpioPin.$assign = "boosterpack.19";
+
+GPIO2.$name           = "CONFIG_GPIO_1";
+GPIO2.gpioPin.$assign = "boosterpack.18";
+
+GPIO3.$name           = "CONFIG_GPIO_2";
+GPIO3.gpioPin.$assign = "boosterpack.13";
+
+GPIO4.$name           = "CONFIG_GPIO_3";
+GPIO4.gpioPin.$assign = "boosterpack.12";
+
+GPIO5.$name           = "CONFIG_GPIO_4";
+GPIO5.gpioPin.$assign = "boosterpack2.34";
+
+GPIO6.$name           = "CONFIG_GPIO_5";
+GPIO6.gpioPin.$assign = "boosterpack2.33";
+
+GPIO7.$name           = "CONFIG_GPIO_6";
+GPIO7.gpioPin.$assign = "boosterpack2.31";
+
+GPIO8.$name           = "CONFIG_GPIO_7";
+GPIO8.gpioPin.$assign = "boosterpack.5";
+
+GPIO9.$name           = "CONFIG_GPIO_8";
+GPIO9.gpioPin.$assign = "expansion.6";
+
+GPIO10.$name           = "CONFIG_GPIO_9";
+GPIO10.gpioPin.$assign = "expansion.8";
+
+GPIO11.$name           = "CONFIG_GPIO_10";
+GPIO11.gpioPin.$assign = "boosterpack2.29";
+
+GPIO12.$name           = "CONFIG_GPIO_11";
+GPIO12.gpioPin.$assign = "boosterpack2.30";
+
+GPIO13.$name           = "CONFIG_GPIO_12";
+GPIO13.gpioPin.$assign = "expansion.25";
+
+GPIO14.$name           = "CONFIG_GPIO_13";
+GPIO14.gpioPin.$assign = "boosterpack2.17";
+
+GPIO15.$name           = "CONFIG_GPIO_14";
+GPIO15.gpioPin.$assign = "boosterpack.3";
+
+GPIO16.$name           = "CONFIG_GPIO_15";
+GPIO16.gpioPin.$assign = "boosterpack.4";
+
+I2C1.$name              = "CONFIG_I2C_0";
+I2C1.i2c.$name          = "MyI2C1";
+I2C1.i2c.$assign        = "I2C2";
+I2C1.i2c.sdaPin.$assign = "boosterpack2.10";
+I2C1.i2c.sclPin.$assign = "boosterpack2.9";
+
+PWM1.$name              = "CONFIG_PWM_0";
+PWM1.pwm.$name          = "MyPWM1";
+PWM1.pwm.pwmPin.$assign = "boosterpack.40";
+
+PWM2.$name              = "CONFIG_PWM_1";
+PWM2.pwm.$name          = "MyPWM1";
+PWM2.pwm.pwmPin.$assign = "boosterpack.39";
+
+PWM3.$name              = "CONFIG_PWM_2";
+PWM3.pwm.$name          = "MyPWM1";
+PWM3.pwm.pwmPin.$assign = "boosterpack.38";
+
+PWM4.$name              = "CONFIG_PWM_3";
+PWM4.pwm.$name          = "MyPWM1";
+PWM4.pwm.pwmPin.$assign = "boosterpack.37";
+
+PWM5.$name              = "CONFIG_PWM_4";
+PWM5.pwm.$name          = "MyPWM1";
+PWM5.pwm.pwmPin.$assign = "boosterpack2.40";
+
+PWM6.$name              = "CONFIG_PWM_5";
+PWM6.pwm.$name          = "MyPWM1";
+PWM6.pwm.pwmPin.$assign = "boosterpack2.38";
+
 RTOS.name = "FreeRTOS";
 
-/* ======== Display ======== */
-var Display = scripting.addModule("/ti/display/Display");
-var display = Display.addInstance();
-display.$hardware = system.deviceData.board.components.XDS110UART;
+Timer1.$name         = "CONFIG_TIMER_0";
+Timer1.timer.$name   = "MyTimer1";
+Timer1.timer.$assign = "Timer0";
 
-/* ======== SlNet Interfaces ======== */
-var SlNet = scripting.addModule("/ti/net/SlNet");
-var interface1 = SlNet.addInstance();
-interface1.id = 2;
-interface1.enableSecureSocks = false;
+Timer2.$name         = "CONFIG_TIMER_1";
+Timer2.timer.$name   = "MyTimer1";
+Timer2.timer.$assign = "Timer1";
 
-/* ======== General ======== */
-var General = scripting.addModule("/ti/ndk/General");
-General.ipv6 = false;
-General.ndkThreadStkSize = 2048;
-General.lowPriTaskDefStkSize = 2048;
+Timer3.$name         = "CONFIG_TIMER_2";
+Timer3.timer.$name   = "MyTimer1";
+Timer3.timer.$assign = "Timer2";
+
+Timer4.$name         = "CONFIG_TIMER_3";
+Timer4.timer.$name   = "MyTimer1";
+Timer4.timer.$assign = "Timer3";
+
+UART1.$name              = "CONFIG_UART_0";
+UART1.uart.$name         = "MyUART1";
+UART1.uart.$assign       = "UART6";
+UART1.uart.txPin.$assign = "boosterpack2.4";
+UART1.uart.rxPin.$assign = "boosterpack2.3";
+
+General.ndkThreadStkSize      = 2048;
+General.lowPriTaskDefStkSize  = 2048;
 General.normPriTaskDefStkSize = 2048;
 General.highPriTaskDefStkSize = 2048;
-General.networkIPAddrHook = "netIPAddrHook";
-/* --- TCP --- */
-General.tcpTxBufSize = 1024;
-General.tcpRxBufSize = 1024;
-General.tcpRxBufLimit = 2048;
-/* --- UDP --- */
-General.udpRxBufSize = 2048;
+General.networkIPAddrHook     = "netIPAddrHook";
+General.tcpTxBufSize          = 1024;
+General.tcpRxBufSize          = 1024;
+General.tcpRxBufLimit         = 2048;
+General.udpRxBufSize          = 2048;
 
-/* ======== NIMU ======== */
-var eth0 = scripting.addModule("/ti/ndk/NIMU").addInstance();
-eth0.dhcpcServReportFxn = "serviceReport";
-eth0.emac.$name = "CONFIG_EMAC_0";
+NIMU1.$name                     = "CONFIG_NIMU_0";
+NIMU1.dhcpcServReportFxn        = "serviceReport";
+NIMU1.emac.$name                = "CONFIG_EMAC_0";
+NIMU1.emac.emac.$name           = "MyETHERNET1";
+NIMU1.emac.emac.led0Pin.$assign = "boosterpack2.39";
+
+SlNet1.$name             = "CONFIG_SLNET_0";
+SlNet1.id                = 2;
+SlNet1.enableSecureSocks = false;
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+ADC1.adc.$suggestSolution                = "ADC1";
+ADC2.adc.$suggestSolution                = "ADC1";
+ADC3.adc.$suggestSolution                = "ADC1";
+ADC4.adc.$suggestSolution                = "ADC1";
+ADC5.adc.$suggestSolution                = "ADC1";
+ADC6.adc.$suggestSolution                = "ADC1";
+ADC7.adc.$suggestSolution                = "ADC1";
+ADC8.adc.$suggestSolution                = "ADC1";
+ADC9.adc.$suggestSolution                = "ADC1";
+ADC10.adc.$suggestSolution               = "ADC1";
+ADC11.adc.$suggestSolution               = "ADC1";
+ADC12.adc.$suggestSolution               = "ADC1";
+PWM1.pwm.$suggestSolution                = "PWM0";
+PWM2.pwm.$suggestSolution                = "PWM0";
+PWM3.pwm.$suggestSolution                = "PWM0";
+PWM4.pwm.$suggestSolution                = "PWM0";
+PWM5.pwm.$suggestSolution                = "PWM0";
+PWM6.pwm.$suggestSolution                = "PWM0";
+NIMU1.emac.emac.$suggestSolution         = "ETHERNET0";
+NIMU1.emac.emac.led1Pin.$suggestSolution = "61";
