@@ -26,62 +26,60 @@ Setup FreeRTOS in CCS
 
 PIN Functionality
 
-PM3    GPIO        1
-PH2    GPIO        2
-PN2    GPIO        3
-PN3    GPIO        4
-PP2    GPIO        5
-PL0    GPIO        6
-PL1    GPIO        7
-PL2    GPIO        8
-PL3    GPIO        9
-PP5    GPIO       10
-PH0    GPIO       11
-PH1    GPIO       12
-PK6    GPIO       13
-PK7    GPIO       14
-PC6    GPIO       15
-PP4    GPIO       16
+PM3    GPIO        0
+PH2    GPIO        1
+PN2    GPIO        2
+PN3    GPIO        3
+PH0    GPIO        4
+PH1    GPIO        5
+PK7    GPIO        6
+PC6    GPIO        7
+PA2    GPIO        8
+PA3    GPIO        9
+PA4    GPIO       10
+PA5    GPIO       11
+PA6    GPIO       12
+PA7    GPIO       13
+PC4    GPIO       14
+PC5    GPIO       15
 
-PB4    AIN         1
-PB5    AIN         2
-PK0    AIN         3
-PK1    AIN         4
-PK2    AIN         5
-PK3    AIN         6
-PE4    AIN         7
-PE5    AIN         8
-PE0    AIN         9
-PE1    AIN        10
-PE2    AIN        11
-PE3    AIN        12
+PB4    AIN         0
+PB5    AIN         1
+PK0    AIN         2
+PK1    AIN         3
+PK2    AIN         4
+PK3    AIN         5
+PE4    AIN         6
+PE5    AIN         7
+PE0    AIN         8
+PE1    AIN         9
+PE2    AIN        10
+PE3    AIN        11
 
-PF1    PWM         1
-PF2    PWM         2
-PF3    PWM         3
-PG0    PWM         4
-PG1    PWM         5
-PK4    PWM         6
-PK5    PWM         7
-PM0    PWM         8
+PF1    PWM         0
+PF2    PWM         1
+PF3    PWM         2
+PG0    PWM         3
+PG1    PWM         4
+PK5    PWM         5
 
-PL4    TMR         1
-PL5    TMR         2
-PM1    TMR         3
-PM2    TMR         4
+PL4    TMR         0
+PL5    TMR         1
+PM1    TMR         2
+PM2    TMR         3
 
-PA0    CANRX       1
-PA1    CANTX       1
+PA0    CANRX       0
+PA1    CANTX       0
 
-PN5    I2C_SCL     1
-PN4    I2C_SDA     1
+PN5    I2C_SCL     0
+PN4    I2C_SDA     0
 
-PQ2    SPI_MOSI    1
-PQ3    SPI_MISO    1
-PP3    SPI_CS      1
-PQ0    SPI_CLK     1
+PQ2    SPI_MOSI    0
+PQ3    SPI_MISO    0
+PP3    SPI_CS      0
+PQ0    SPI_CLK     0
 
-PP0    UART_RX     1
-PP1    UART_TX     1
-PC4    UART_RX     2
-PC5    UART_TX     2
+PP0    UART_RX     0
+PP1    UART_TX     0
+PC4    UART_RX     1
+PC5    UART_TX     1
